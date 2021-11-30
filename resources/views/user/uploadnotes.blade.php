@@ -62,22 +62,22 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-              <li class="nav-item ">
+          <li class="nav-item ">
                 <a class="nav-link" href="/teacherhome">Home
-                 
+               
                 </a>
-                <li class="nav-item dropdown ">
+              </li>
+              <li class="nav-item dropdown active">
                 <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Upload
-                
+                <span class="sr-only">(current)</span>
                 </a>
               
-                <div class="dropdown-menu active">
-                    <a class="dropdown-item" href="/uploadsyllabus">Upload syllabus
-                    <span class="sr-only">(current)</span>
-                    </a>
+                <div class="dropdown-menu ">
+                    <a class="dropdown-item" href="/uploadsyllabus">Upload syllabus</a>
                     <a class="dropdown-item" href="/uploadnotes" >Upload Notes</a>
                     <a class="dropdown-item" href="/uploadtimetable">Upload TimeTables</a>
-                    <a class="dropdown-item" href="/uploadresults">>Upload Results<</a>
+                    <a class="dropdown-item" href="/uploadresults">Upload Results</a>
+                   
                 </div>
               </li>
               
@@ -86,31 +86,14 @@
                
                 </a>
               
-                <div class="dropdown-menu ">
-                    <a class="dropdown-item" href="/tviewsyllabus">view syllabus
-                   
-                    </a>
-                    <!-- <a class="dropdown-item" href="/uploadnotes" >Upload Notes</a>
-                    <a class="dropdown-item" href="/uploadtimetable">Upload TimeTables</a>
-                    <a class="dropdown-item" href="/uploadresults">>Upload Results<</a> -->
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/tviewsyllabus">view syllabus</a>
+                    <a class="dropdown-item" href="/tviewnotes" >view Notes</a>
+                     <a class="dropdown-item" href="/tviewtimetable">view TimeTables</a> 
+                    <a class="dropdown-item" href="/tviewresult">view Results</a>
                 </div>
               </li>
-              <!-- <li class="nav-item ">
-                <a class="nav-link" href="">
-               
-                </a>
-              </li> -->
-              <!-- <li class="nav-item ">
-                <a class="nav-link" href="">
-                
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href=""></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href=""/a>
-              </li> -->
+              
               
               <li class="nav-item ">
                 <a class="nav-link" href="/tviewfeedback">View Feedbacks
@@ -120,6 +103,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="/tlogout">Logout</a>
               </li>
+              
           </div>
         </div>
       </nav>

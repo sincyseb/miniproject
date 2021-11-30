@@ -61,29 +61,28 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-          <li class="nav-item ">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
                 <a class="nav-link" href="/teacherhome">Home
-            
+                
                 </a>
               </li>
-              <li class="nav-item dropdown active">
+              <li class="nav-item dropdown ">
                 <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Upload
-                <span class="sr-only">(current)</span>
+               
                 </a>
               
-                <div class="dropdown-menu ">
+                <div class="dropdown-menu">
                     <a class="dropdown-item" href="/uploadsyllabus">Upload syllabus</a>
                     <a class="dropdown-item" href="/uploadnotes" >Upload Notes</a>
                     <a class="dropdown-item" href="/uploadtimetable">Upload TimeTables</a>
                     <a class="dropdown-item" href="/uploadresults">Upload Results</a>
-                   
                 </div>
               </li>
               
-              <li class="nav-item dropdown ">
+              <li class="nav-item dropdown active">
                 <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">View
-               
+                <span class="sr-only">(current)</span>
                 </a>
               
                 <div class="dropdown-menu">
@@ -104,6 +103,8 @@
                 <a class="nav-link" href="/tlogout">Logout</a>
               </li>
               
+              
+            </ul>
           </div>
         </div>
       </nav>
@@ -114,7 +115,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1>Upload Results</h1>
+            <h1>Results</h1>
             <!-- <span>feel free to send us a message now!</span> -->
           </div>
         </div>
@@ -124,60 +125,30 @@
     <div class="col-md-12">
       <div class="container"> 
             <div class="contact-form">
-              <form id="" action="/results" method="post" enctype="multipart/form-data">
-                @csrf
-                <!-- <div class="row">
-                  <div class="col-lg-6 col-md-12 col-sm-12">
-                    <fieldset>
-                      Student Name:
-                      <input name="sname" type="text" class="form-control" id="sname" placeholder="enter your course" required=""><br>
-                    </fieldset>
-                  </div>
-                </div> -->
-                <div class="row">
-                  <div class="col-lg-6 col-md-12 col-sm-12">
-                    <fieldset>
-                      Course:
-                      <input name="course" type="text" class="form-control" id="course"  required=""><br>
-                    </fieldset>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-lg-6 col-md-12 col-sm-12">
-                    <fieldset>
-                      Semester:
-                      <input name="sem" type="text" class="form-control" id="sem"  required=""><br>
-                    </fieldset>
-                  </div>
-                </div>
-                <!-- <div class="row">
-                  <div class="col-lg-6 col-md-12 col-sm-12">
-                    <fieldset>
-                      Subject:
-                      <input name="sub" type="text" class="form-control" id="sem"  required=""><br>
-                    </fieldset>
-                  </div>
-                </div> -->
-                <div class="row">
-                  <div class="col-lg-6 col-md-12 col-sm-12">
-                    <fieldset>
-                      Marks:
-                      <input name="mark" type="file" class="form-control" id="mark"  required=""><br>
-                    </fieldset>
-                  </div>
-                </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="filled-button btn btn-info">Submit</button>
-                    </fieldset>
-                  </div>
-                </div>
-              </form>
+              <table class="table table-bordered table-striped ">
+                <thead>
+                  
+                  <td  style="font-size:20px">course</td>
+                  <td  style="font-size:20px">semester</td>
+                  <td  style="font-size:20px">result</td>
+                  <td  style="font-size:20px">status</td>
+                </thead>
+                <tbody>
+                @foreach($result as $value)
+               
+                <tr>
+                <td>{{$value->course}}</td>
+                <td>{{$value->semester}}</td>
+                <td><a href="/uploads/{{$value->result}}">{{$value->result}}</a></td>   
+                <td>{{$value->status}}</td> 
+                          </tr>
+               
+                @endforeach
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
-    
-    
     <div class="contact-information">
       <div class="container">
         <div class="row">

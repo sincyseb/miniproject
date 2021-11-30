@@ -122,7 +122,8 @@
                 <td>{{$value->course}}</td>
                 <td>{{$value->semester}}</td>
                 <!-- <td>{{$value->result}}</td> -->
-                <td><a href="/uploads/{{$value->result}}">{{$value->result}}</a></td>                </tr>
+                <td><a href="/uploads/{{$value->result}}">{{$value->result}}</a></td>    
+                          </tr>
                 @endif
                 @endforeach
                 </tbody>

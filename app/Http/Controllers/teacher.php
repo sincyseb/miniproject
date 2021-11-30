@@ -237,6 +237,35 @@ class teacher extends Controller
     }
 
 
+    public function tviewtimetable()
+    {
+        $data['result']=$this->obj4->selecttimetable('timetables');
+        $id=session('sessid');
+        // echo $id;
+        // exit();
+        // $data['result']=timetable::join('tregisters','tregisters.dept','=','timetables.course')
+        // ->where('tregisters.id',$id)
+        // ->select('timetables.course')
+        // ->get();
+        return view('user.tviewtimetable',$data);
+    }
+
+
+    public function tviewnotes()
+    {
+        $data['result']=$this->obj2->selectnotes('notes');
+        return view('user.tviewnotes',$data);
+    }
+
+
+    public function tviewresult()
+    {
+        
+        $data['result']=$this->obj3->selectresult('results');
+        return view('user.tviewresult',$data);
+    }
+
+
     // public function sdownload()
     // {
     //     $file=public_path()."'/uploads',$filename";

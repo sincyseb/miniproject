@@ -72,6 +72,10 @@ Route::get('/uploadresults',[teacher::class,'result']);
 Route::get('/uploadtimetable',[teacher::class,'timetable']);
 Route::get('/tviewfeedback',[teacher::class,'viewfeedback']);
 Route::get('/tviewsyllabus',[teacher::class,'tviewsyllabus']);
+Route::get('/tviewnotes',[teacher::class,'tviewnotes']);
+Route::get('/tviewtimetable',[teacher::class,'tviewtimetable']);
+Route::get('/tviewresult',[teacher::class,'tviewresult']);
+Route::get('/sdownload/{id}',[teacher::class,'sdownload']);
 //login
 Route::post('/tloging',[teacher::class,'loginaction']);
 //insert into tables
