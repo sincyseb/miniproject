@@ -84,7 +84,7 @@
                 <a class="nav-link" href="/addfeedback">Add Feedbacks</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/logout">Loguot</a>
+                <a class="nav-link" href="/logout">LOGOUT</a>
               </li>
             </ul>
           </div>
